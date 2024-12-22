@@ -1,0 +1,7 @@
+.homePageContainer {
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(rgba(158, 158, 158, 0.7), rgba(145, 145, 145, 0.7)), url(../../assets/bg.jpg);
+}

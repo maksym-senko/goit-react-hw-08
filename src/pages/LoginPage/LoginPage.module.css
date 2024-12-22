@@ -1,0 +1,50 @@
+.loginPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 550px;
+    background-image: linear-gradient(rgba(158, 158, 158, 0.7), rgba(145, 145, 145, 0.7)), url(../../assets/bg.jpg);
+}
+
+.loginPageTitle {
+    margin-top: 80px;
+}
+
+.loginPageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputText {
+    width: 300px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #5f5f5f;
+    background-color: #ffffff;
+}
+
+.inputText:hover {
+    border: 2px solid rgb(102, 39, 204);
+}
+
+.btnLogin {
+    width: 150px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #5f5f5f;
+    background-color: #49097e;
+    color: #fff;
+}
+
+.btnLogin:hover {
+    background-color: #6627cc;
+}

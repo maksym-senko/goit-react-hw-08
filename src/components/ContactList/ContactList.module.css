@@ -1,0 +1,103 @@
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 60px;
+    list-style: none;
+}
+
+.contactItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #5f5f5f;
+    background-color: #fff;
+    color: #000000;
+}
+
+.btnDelete {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #5f5f5f;
+    background-color: #49097e;
+    color: #fff;
+}
+
+.btnDelete:hover {
+    background-color: rgb(102, 39, 204);  
+}
+
+.error {
+    text-align: center;
+    width: 300px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid #5f5f5f;
+    background-color: #fff;
+    color: #000000;
+}
+
+.loading {
+    text-align: center;
+    width: 300px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid #5f5f5f;
+    background-color: #fff;
+    color: #000000;
+}
+
+/* ContactList.module.css */
+
+/* Модальне вікно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modalContent button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .modalContent button:hover {
+    color: #fff;
+    background-color: rgb(102, 39, 204);
+  }
+  
+  .modalContent button:first-child {
+    background-color: red;
+    color: white;
+  }
+  
+  .modalContent button:last-child {
+    background-color: gray;
+    color: white;
+  }
+
+  .modalContent:hover button:last-child {
+    background-color: rgb(102, 39, 204);
+  }
