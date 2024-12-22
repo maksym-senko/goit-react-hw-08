@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../redux/auth/operation";
+import { login } from "../../redux/auth/operations";
 import { toast } from "react-hot-toast";
 import style from './LoginPage.module.css';
+
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -10,16 +11,19 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const error = useSelector((state) => state.auth.error);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(login({ email, password }));
   };
 
+
   useEffect(() => {
     if (error) {
-      toast.error(error); // Відображаємо помилку через Toaster
+      toast.error(error); 
     }
   }, [error]);
+
 
   return (
     <div className={style.loginPageContainer}>
@@ -50,5 +54,6 @@ const LoginPage = () => {
     </div>
   );
 };
+
 
 export default LoginPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { login } from '../../redux/auth/operation';
+import { login } from '../../redux/auth/operations';
 
 
 

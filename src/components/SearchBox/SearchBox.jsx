@@ -8,7 +8,7 @@ const SearchBox = () => {
   const dispatch = useDispatch();
 
   const handleSearchChange = (e) => {
-    dispatch(setSearchQuery(e.target.value)); // Оновлюємо пошуковий запит
+    dispatch(setSearchQuery(e.target.value));
   };
   
     return (

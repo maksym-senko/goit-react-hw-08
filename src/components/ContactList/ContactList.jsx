@@ -8,7 +8,6 @@ import {
 } from "../../redux/contacts/selectors";
 import { selectSearchQuery } from "../../redux/filters/selectors";
 import style from "./ContactList.module.css";
-import { Toaster } from "react-hot-toast";
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -24,7 +23,7 @@ const ContactList = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  // Фільтрація контактів за запитом пошуку
+ 
   const filteredContacts = contacts?.filter((contact) =>
     contact.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     contact.number.includes(searchQuery)
@@ -47,6 +46,7 @@ const ContactList = () => {
     setShowModal(true);
   };
 
+  
   const handleConfirmDelete = () => {
     if (contactToDelete) {
       dispatch(deleteContact(contactToDelete)).then(() => {
@@ -56,9 +56,11 @@ const ContactList = () => {
     }
   };
 
+
   const handleCancelDelete = () => {
     setShowModal(false);
   };
+
 
   return (
     <div>
@@ -76,6 +78,7 @@ const ContactList = () => {
         ))}
       </ul>
 
+
       {showModal && (
         <div className={style.modal}>
           <div className={style.modalContent}>
@@ -88,5 +91,6 @@ const ContactList = () => {
     </div>
   );
 };
+
 
 export default ContactList;

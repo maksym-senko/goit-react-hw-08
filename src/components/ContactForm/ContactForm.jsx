@@ -3,18 +3,21 @@ import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import style from './ContactForm.module.css';
 
+
 const ContactForm = () => {
   const [name, setName] = useState('');
-  const [number, setNumber] = useState(''); // Змінив 'phone' на 'number'
+  const [number, setNumber] = useState(''); 
   const dispatch = useDispatch();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Диспатчимо додавання контакту з правильними властивостями
+
     dispatch(addContact({ name, number }));
-    setName('');  // Очищаємо поле після відправки
-    setNumber(''); // Очищаємо поле після відправки
+    setName('');  
+    setNumber('');
   };
+
 
   return (
     <form onSubmit={handleSubmit} className={style.formContainer}>
@@ -29,7 +32,7 @@ const ContactForm = () => {
       <input
         className={style.inputText}
         type="tel"
-        value={number} // Змінив 'phone' на 'number'
+        value={number}
         onChange={(e) => setNumber(e.target.value)}
         placeholder="Number"
         required
@@ -38,5 +41,6 @@ const ContactForm = () => {
     </form>
   );
 };
+
 
 export default ContactForm;

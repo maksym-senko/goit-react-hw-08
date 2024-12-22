@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { register } from "../../redux/auth/operation";
-import { Toaster } from "react-hot-toast";
+import { register } from "../../redux/auth/operations";
 import style from "./RegisterPage.module.css";
+
 
 const RegistrationPage = () => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.auth.error);
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Валідація полів
+
     if (!formData.name || !formData.email || !formData.password) {
       alert("All fields are required.");
       return;
@@ -26,8 +27,10 @@ const RegistrationPage = () => {
       return;
     }
 
+
     dispatch(register(formData));
   };
+
 
   return (
     <div className={style.registerPageContainer}>
@@ -69,5 +72,6 @@ const RegistrationPage = () => {
     </div>
   );
 };
+
 
 export default RegistrationPage;
