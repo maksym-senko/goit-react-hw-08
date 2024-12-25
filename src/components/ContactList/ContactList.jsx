@@ -9,6 +9,7 @@ import {
 import { selectSearchQuery } from "../../redux/filters/selectors";
 import style from "./ContactList.module.css";
 
+
 const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -16,6 +17,7 @@ const ContactList = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
+  
   const [showModal, setShowModal] = useState(false);
   const [contactToDelete, setContactToDelete] = useState(null);
 

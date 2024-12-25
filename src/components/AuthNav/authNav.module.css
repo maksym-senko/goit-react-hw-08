@@ -1,0 +1,25 @@
+.authContainer {
+    display: flex;
+    gap: 30px;
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+.authLink {
+    color: rgb(180, 180, 180);
+    border-bottom: 2px solid #000000;
+    font-size: 16px;
+}
+
+.authLink:hover {
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid #fff;
+}
+
+.authLink:focus,
+.authLink:active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+

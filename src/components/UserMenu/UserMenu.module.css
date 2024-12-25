@@ -1,0 +1,26 @@
+.userMenuContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 420px;
+}
+
+.userMenuText {
+    color: rgb(180, 180, 180);
+    font-size: 16px;
+    text-align: center;
+    margin-right: 470px;
+}
+
+.btnLogout {
+    width: 120px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #5f5f5f;
+    background-color: #49097e;
+    color: #fff;
+}
+
+.btnLogout:hover {
+    background-color: #6627cc;
+}

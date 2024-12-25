@@ -4,15 +4,13 @@ import {
   addContact,
   deleteContact,
   logout,
-} from "./operations";
-
+} from "./operations.js";
 
 
 const initialState = {
-  filters: {
-    searchQuery: "",
-    nameFilter: "",
-  },
+  items: [],
+  isLoading: false,
+  error: null,
 };
 
 
@@ -21,10 +19,12 @@ const handlePending = (state) => {
   state.error = null;
 };
 
+
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
 };
+
 
 const contactsSlice = createSlice({
   name: "contacts",
@@ -57,8 +57,5 @@ const contactsSlice = createSlice({
   },
 });
 
-export const selectContacts = (state) => state.contacts.items;
-export const selectIsLoading = (state) => state.contacts.isLoading;
-export const selectError = (state) => state.contacts.error;
 
 export default contactsSlice.reducer;

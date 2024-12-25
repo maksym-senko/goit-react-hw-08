@@ -1,0 +1,28 @@
+.navigation {
+    width: 1280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+.navLink {
+    color: rgb(180, 180, 180);
+    border-bottom: 2px solid #000000;
+    font-size: 16px;
+}
+
+.navLink:hover {
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid #fff;
+}
+
+.navLink:focus,
+.navLink:active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+

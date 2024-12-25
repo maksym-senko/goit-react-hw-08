@@ -1,12 +1,15 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
-import HomePage from "../../pages/HomePage/HomePage";
+import AppBar from "../AppBar/AppBar";
 
 
 const Layout = () => {
   return (
     <div>
-      <HomePage />
-      <Outlet />
+      <AppBar />
+      <main >
+        <Outlet />
+      </main>
     </div>
   );
 };
